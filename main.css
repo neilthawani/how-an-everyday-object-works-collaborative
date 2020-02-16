@@ -1,7 +1,9 @@
 body {
-    font-family: sans-serif;
-    background-color: #33FFC4;
-    color: #5833FF;
+    font-family: "PT Serif", serif;
+    margin: 0;
+    background-color: #E8ECE7;
+    /* background-color: #33FFC4;
+    color: #5833FF; */
 }
 
 .text-left {
@@ -16,14 +18,30 @@ body {
     margin: auto;
 }
 
+.course-title {
+    margin: 50px auto 25px auto !important;
+    font-size: 42px;
+    margin-block-start: inherit;
+    margin-block-end: inherit;
+    color: black;
+    font-family: "Blippo", fantasy;
+}
+
 .student-content {
     width: 800px;
     margin-left: auto;
     margin-right: auto;
+    font-family: "Open Sans", sans-serif;
 }
 
 .nav-menu {
-    padding: 25px 50px;
+    padding-top: 25px;
+}
+
+.nav-menu .lesson-nav-item {
+    padding-bottom: 10px;
+    padding-left: 50px;
+    font-size: 18px;
 }
 
 .lesson-nav-item {
@@ -31,14 +49,20 @@ body {
     margin-bottom: 20px;
 }
 
+.lesson-nav-item:hover {
+    color: rgb(150, 150, 150);
+}
+
 .lesson-item {
     width: 800px;
     min-height: 450px;
     height: max-content;
-    border: 1px solid #5833FF;
-    padding: 0 0 25px 25px;
+    /* border: 1px solid black; */
+    /* padding: 25px 25px 25px; */
+    background-color: #CBDBC5;
+    color: rgb(20, 20, 20);
     /* border: none; */
-    box-shadow: 2px 2px 2px #5833FF;
+    /* box-shadow: 2px 2px 2px black; */
 }
 
 .lesson-item-answer img {
@@ -47,7 +71,7 @@ body {
 }
 
 .lesson-item-answer-item.selected {
-    border: 1px groove #5833FF;
+    border: 1px groove black;
 }
 
 iframe {
@@ -62,7 +86,7 @@ iframe {
 
 .buttons button {
     margin: 25px 0 0 0;
-    font-size: 18px;
+    font-size: 24px;
     border-radius: 0;
     cursor: pointer;
 }
@@ -91,8 +115,9 @@ select {
 
 .lesson-item-answer-row {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     text-align: center;
+    padding: 10px 100px;
     margin-bottom: 20px;
 }
 
@@ -113,4 +138,12 @@ select {
 #pretest-question-5 .lesson-item-answer-item label {
     margin-top: 15px;
     cursor: pointer;
+}
+
+#fa-1 img {
+    display: block;
+}
+
+#fa-1 select {
+    margin-top: 10px;
 }

@@ -1,66 +1,82 @@
-// document.addEventListener('DOMContentLoaded', (event) => {
-//     window.localStorage.setItem("lessonItemCount", 0);
-//     document.getElementsByClassName("back-button")[0].classList.add("hidden");
-// });
-//
-// var navigateTo = function(el) {
-//     var allInstructionalItems = document.getElementsByClassName("lesson-item");
-//
-//     // hide menu
-//     allInstructionalItems[0].classList.add("hidden");
-//
-//     var newLessonItemCount = parseInt(el.getAttribute("data-attr-item-index"), 10);
-//     window.localStorage.setItem("lessonItemCount", newLessonItemCount);
-//
-//     allInstructionalItems[newLessonItemCount].classList.remove("hidden");
-//
-//     if (newLessonItemCount === allInstructionalItems.length - 1) {
-//         document.getElementsByClassName("back-button")[0].classList.add("hidden");
-//         document.getElementsByClassName("continue-button")[0].classList.add("hidden");
-//     } else {
-//         document.getElementsByClassName("back-button")[0].classList.remove("hidden");
-//     }
-// }
-//
-// var goBack = function() {
-//     var lessonItemValue = window.localStorage.getItem("lessonItemCount"),
-//         lessonItemCount = parseInt(lessonItemValue, 10),
-//         allInstructionalItems = document.getElementsByClassName("lesson-item"),
-//         newLessonItemCount = lessonItemCount - 1;
-//
-//     if (lessonItemCount < allInstructionalItems.length - 1) {
-//         allInstructionalItems[lessonItemCount].classList.add("hidden");
-//         allInstructionalItems[newLessonItemCount].classList.remove("hidden");
-//         window.localStorage.setItem("lessonItemCount", newLessonItemCount);
-//     }
-//
-//     if (newLessonItemCount === 0) {
-//         document.getElementsByClassName("back-button")[0].classList.add("hidden");
-//     }
-// }
-//
-// var continueLesson = function() {
-//     var lessonItemValue = window.localStorage.getItem("lessonItemCount"),
-//         lessonItemCount = parseInt(lessonItemValue, 10),
-//         allInstructionalItems = document.getElementsByClassName("lesson-item"),
-//         newLessonItemCount = lessonItemCount + 1;
-//
-//     window.localStorage.setItem("lessonItemCount", newLessonItemCount);
-//
-//     if (lessonItemValue >= 0 && lessonItemValue < allInstructionalItems.length - 1) {
-//         document.getElementsByClassName("back-button")[0].classList.remove("hidden");
-//     }
-//
-//     if (newLessonItemCount === allInstructionalItems.length - 1) {
-//         document.getElementsByClassName("back-button")[0].classList.add("hidden");
-//         document.getElementsByClassName("continue-button")[0].classList.add("hidden");
-//     }
-//
-//     if (newLessonItemCount < allInstructionalItems.length) {
-//         allInstructionalItems[lessonItemCount].classList.add("hidden");
-//         allInstructionalItems[newLessonItemCount].classList.remove("hidden");
-//     }
-// };
+document.addEventListener('DOMContentLoaded', (event) => {
+    window.localStorage.setItem("lessonItemCount", 0);
+    document.getElementsByClassName("back-button")[0].classList.add("hidden");
+});
+
+var stopVideo = function ( element ) {
+    var iframe = element.querySelector( 'iframe');
+    var video = element.querySelector( 'video' );
+    if ( iframe ) {
+        var iframeSrc = iframe.src;
+        iframe.src = iframeSrc;
+    }
+    if ( video ) {
+        video.pause();
+    }
+};
+
+var navigateTo = function(el) {
+    var allInstructionalItems = document.getElementsByClassName("lesson-item");
+
+    // hide menu
+    allInstructionalItems[0].classList.add("hidden");
+
+    var newLessonItemCount = parseInt(el.getAttribute("data-attr-item-index"), 10);
+    window.localStorage.setItem("lessonItemCount", newLessonItemCount);
+
+    allInstructionalItems[newLessonItemCount].classList.remove("hidden");
+
+    if (newLessonItemCount === allInstructionalItems.length - 1) {
+        document.getElementsByClassName("back-button")[0].classList.add("hidden");
+        document.getElementsByClassName("continue-button")[0].classList.add("hidden");
+    } else {
+        document.getElementsByClassName("back-button")[0].classList.remove("hidden");
+    }
+}
+
+var goBack = function() {
+    var lessonItemValue = window.localStorage.getItem("lessonItemCount"),
+        lessonItemCount = parseInt(lessonItemValue, 10),
+        allInstructionalItems = document.getElementsByClassName("lesson-item"),
+        newLessonItemCount = lessonItemCount - 1;
+
+    if (lessonItemCount < allInstructionalItems.length - 1) {
+        allInstructionalItems[lessonItemCount].classList.add("hidden");
+        allInstructionalItems[newLessonItemCount].classList.remove("hidden");
+        window.localStorage.setItem("lessonItemCount", newLessonItemCount);
+    }
+
+    if (newLessonItemCount === 0) {
+        document.getElementsByClassName("back-button")[0].classList.add("hidden");
+    }
+
+    // stopVideo();
+}
+
+var continueLesson = function() {
+    var lessonItemValue = window.localStorage.getItem("lessonItemCount"),
+        lessonItemCount = parseInt(lessonItemValue, 10),
+        allInstructionalItems = document.getElementsByClassName("lesson-item"),
+        newLessonItemCount = lessonItemCount + 1;
+
+    window.localStorage.setItem("lessonItemCount", newLessonItemCount);
+
+    if (lessonItemValue >= 0 && lessonItemValue < allInstructionalItems.length - 1) {
+        document.getElementsByClassName("back-button")[0].classList.remove("hidden");
+    }
+
+    if (newLessonItemCount === allInstructionalItems.length - 1) {
+        document.getElementsByClassName("back-button")[0].classList.add("hidden");
+        document.getElementsByClassName("continue-button")[0].classList.add("hidden");
+    }
+
+    if (newLessonItemCount < allInstructionalItems.length) {
+        allInstructionalItems[lessonItemCount].classList.add("hidden");
+        allInstructionalItems[newLessonItemCount].classList.remove("hidden");
+    }
+
+    // stopVideo();
+};
 
 // pre-test code
 document.addEventListener('DOMContentLoaded', (event) => {
