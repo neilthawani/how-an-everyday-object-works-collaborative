@@ -21,7 +21,7 @@
 
   <body>
     <h1 class="text-center course-title">How a Pin Tumbler Lock Works</h1>
-    
+
 
     <div class="student-content">
           <div class="lesson-item nav-menu" data-attr-item-number="0">
@@ -35,10 +35,7 @@
              <p class="lesson-nav-item" onclick=navigateTo(this) data-attr-item-index="1">Test5</p>
              <p class="lesson-nav-item" onclick=navigateTo(this) data-attr-item-index="1">Test6</p>
              <p class="lesson-nav-item" onclick=navigateTo(this) data-attr-item-index="1">Test7</p>
-            </div> 
-        <!-- Note: Insert more items here as we refine the course.(I just add random things to indicate that
-        the side bar should be the same height as the "student-content" rectangle) -->
-    
+          </div>
         </div>
 
       <div class="lesson-item hidden" data-attr-item-number="1">

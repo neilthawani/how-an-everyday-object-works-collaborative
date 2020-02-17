@@ -55,6 +55,24 @@ body {
     color: rgb(150, 150, 150);
 }
 
+.course-content {
+    display: flex;
+}
+
+.side-nav {
+    /* display: inline; */
+    height: 100%;
+    width: 200px;
+    position: relative;
+    z-index: 1;
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #66806d;
+    overflow-x: hidden;
+    padding: 20px 50px;
+    color: #f2f2f2;
+}
+
 .lesson-item {
     width: 800px;
     min-height: 450px;
@@ -99,13 +117,6 @@ iframe {
     border-radius: 0;
     cursor: pointer;
 }
-
-/* .submit-button button a,
-.submit-button button a:focus,
-.submit-button button a:visited {
-    text-decoration: none;
-    color: black;
-} */
 
 select {
     font-size: 18px;
@@ -263,13 +274,13 @@ select {
     margin: 0 50px;
 }
 
-#posttest-question-4 .lesson-item-answer-item,
 #pretest-question-5 .lesson-item-answer-item {
     padding: 20px;
 }
 
 #posttest-question-4 img {
     margin-left: 50px;
+    margin-top: 50px;
 }
 
 #posttest-question-4 .lesson-item-answer-item input,

@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     window.localStorage.setItem("lessonItemCount", 0);
     document.getElementsByClassName("back-button")[0].classList.add("hidden");
     document.getElementsByClassName("back-button")[1].classList.add("hidden");
+    // document.getElementsByClassName("side-nav")[0].classList.add("hidden");
 });
 
 // user control
@@ -24,9 +25,11 @@ var navigateTo = function(el) {
         document.getElementsByClassName("continue-button")[0].classList.add("hidden");
         document.getElementsByClassName("back-button")[1].classList.add("hidden");
         document.getElementsByClassName("continue-button")[1].classList.add("hidden");
+        // document.getElementsByClassName("side-nav")[0].classList.add("hidden");
     } else {
         document.getElementsByClassName("back-button")[0].classList.remove("hidden");
         document.getElementsByClassName("back-button")[1].classList.remove("hidden");
+        // document.getElementsByClassName("side-nav")[0].classList.remove("hidden");
     }
 }
 
@@ -46,6 +49,7 @@ var goBack = function() {
     if (newLessonItemCount === 0) {
         document.getElementsByClassName("back-button")[0].classList.add("hidden");
         document.getElementsByClassName("back-button")[1].classList.add("hidden");
+        // document.getElementsByClassName("side-nav")[0].classList.add("hidden");
     }
 
     stopVideo();
@@ -63,6 +67,7 @@ var continueLesson = function() {
     if (lessonItemValue >= 0 && lessonItemValue < allInstructionalItems.length - 1) {
         document.getElementsByClassName("back-button")[0].classList.remove("hidden");
         document.getElementsByClassName("back-button")[1].classList.remove("hidden");
+        // document.getElementsByClassName("side-nav")[0].classList.remove("hidden");
     }
 
     if (newLessonItemCount === 2 || newLessonItemCount === 8 || newLessonItemCount === allInstructionalItems.length - 1) {
@@ -70,6 +75,7 @@ var continueLesson = function() {
         document.getElementsByClassName("continue-button")[0].classList.add("hidden");
         document.getElementsByClassName("back-button")[1].classList.add("hidden");
         document.getElementsByClassName("continue-button")[1].classList.add("hidden");
+        // document.getElementsByClassName("side-nav")[0].classList.add("hidden");
     }
 
     if (newLessonItemCount < allInstructionalItems.length) {
@@ -113,12 +119,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
     $("#pretest button.submit").click(function() {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
-        debugger;
+
         this.classList.add("hidden");
         document.getElementsByClassName("back-button")[0].classList.remove("hidden");
         document.getElementsByClassName("continue-button")[0].classList.remove("hidden");
         document.getElementsByClassName("back-button")[1].classList.remove("hidden");
         document.getElementsByClassName("continue-button")[1].classList.remove("hidden");
+        // document.getElementsByClassName("side-nav")[0].classList.remove("hidden");
 
         // if question 1 answer is B, select correct feedback
         var selectedAnswer = $("#pretest-question-1 .selected")
