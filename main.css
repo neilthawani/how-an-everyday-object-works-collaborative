@@ -144,7 +144,7 @@ select {
     margin: 0 0 15px 0;
 }
 
-#pretest .pretest-question
+#pretest .pretest-question,
 #posttest .posttest-question {
     margin: 0 50px;
 }
