@@ -1,0 +1,311 @@
+body {
+    font-family: "PT Serif", serif;
+    margin: 0 0 50px 0;
+    background-color: #E8ECE7;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.middle {
+    margin: auto;
+}
+
+.course-title {
+    margin: 50px auto 0 auto !important;
+    font-size: 42px;
+    margin-block-start: inherit;
+    margin-block-end: inherit;
+    color: black;
+    font-family: "Blippo", fantasy;
+}
+
+.student-content {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Open Sans", sans-serif;
+}
+
+.nav-menu {
+    padding-top: 25px;
+}
+
+.nav-menu .lesson-nav-item {
+    padding-bottom: 10px;
+    padding-left: 50px;
+    font-size: 18px;
+}
+
+.lesson-nav-item {
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.lesson-nav-item:hover {
+    color: rgb(150, 150, 150);
+}
+
+.lesson-item {
+    width: 800px;
+    min-height: 450px;
+    height: max-content;
+    background-color: #CBDBC5;
+    color: rgb(20, 20, 20);
+}
+
+.lesson-item-answer img {
+    margin: 10px 20px;
+    cursor: pointer;
+}
+
+.lesson-item-answer-item.selected {
+    border: 1px groove black;
+}
+
+iframe {
+    display: block;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+.buttons button {
+    margin: 15px 0;
+    font-size: 24px;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+.submit-button {
+    text-align: right;
+}
+
+.submit-button button {
+    margin: 15px 0;
+    font-size: 24px;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+#posttest .submit-button {
+    margin-right: 50px;
+}
+
+.submit-button button a,
+.submit-button button a:focus,
+.submit-button button a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+select {
+    font-size: 18px;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.lesson-item-question {
+    font-size: 24px;
+}
+
+#fa-2,
+#fa-1,
+#pretest,
+#posttest {
+    padding: 25px 0;
+}
+
+#fa-1 h2,
+#pretest h2,
+#posttest h2 {
+    padding: 25px 0 0 50px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+#fa-1 h2 {
+    margin: 0 0 15px 0;
+}
+
+#pretest .pretest-question
+#posttest .posttest-question {
+    margin: 0 50px;
+}
+
+#fa-2 .lesson-item-question,
+#fa-1 .lesson-item-question,
+#pretest .lesson-item-question,
+#posttest .lesson-item-question {
+    font-size: 18px;
+}
+
+#posttest .lesson-item-question {
+    margin: 25px 50px;
+}
+
+#fa-2 .lesson-item-question,
+#fa-1 .lesson-item-question {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#fa-1 .lesson-item-answer-row,
+#pretest .lesson-item-answer-row,
+#posttest .lesson-item-answer-row {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#fa-2 .lesson-item-answer-row {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 40px;
+}
+
+#fa-2 .lesson-item-answer-row *:first-child {
+    padding-left: 50px;
+    padding-right: 25px;
+}
+
+#fa-2 .lesson-item-answer-row *:last-child {
+    padding-left: 25px;
+    padding-right: 50px;
+}
+
+#fa-2 .lesson-item-answer-row input {
+    margin-top: 15px;
+}
+
+#fa-1 .lesson-item-answer-row {
+    justify-content: space-between;
+    margin: 25px 100px;
+}
+
+#fa-2 .question-feedback-text,
+#pretest .question-feedback-text,
+#posttest .question-feedback-text {
+    border: 1px solid #E8ECE7;
+    background-color: #E8ECE7;
+    padding: 10px;
+    font-size: 18px;
+    color: black;
+}
+
+#posttest .question-feedback-text {
+    margin: 0 50px;
+}
+
+#pretest .question-feedback-text h3,
+#posttest .question-feedback-text h3 {
+    display: inline;
+}
+
+#posttest-question-1 .lesson-item-answer-item,
+#pretest-question-1 .lesson-item-answer-item {
+    background-color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#posttest-question-2 img,
+#pretest-question-2 img {
+    display: block;
+}
+
+#posttest-question-2 img {
+    margin-bottom: 10px;
+}
+
+#posttest-question-2 .lesson-item-answer-row,
+#pretest-question-2 .lesson-item-answer-row {
+    margin-bottom: 40px;
+}
+
+.lesson-item-answer-row {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.lesson-item-answer-text {
+    margin-block-end: 0;
+    font-weight: 900;
+}
+
+.pretest-dropdown-question-2 {
+    margin-top: 10px;
+}
+
+#posttest-question-3 .lesson-item-answer-item,
+#pretest-question-4 .lesson-item-answer-item {
+    line-height: 2;
+    margin-bottom: 10px;
+}
+
+#posttest .lesson-item-answer-item {
+    margin: 0 50px;
+}
+
+#posttest-question-4 .lesson-item-answer-item,
+#pretest-question-5 .lesson-item-answer-item {
+    padding: 20px;
+}
+
+#posttest-question-4 img {
+    margin-left: 50px;
+}
+
+#posttest-question-4 .lesson-item-answer-item input,
+#posttest-question-4 .lesson-item-answer-item label,
+#pretest-question-5 .lesson-item-answer-item input,
+#pretest-question-5 .lesson-item-answer-item label {
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+#fa-1 img {
+    display: block;
+}
+
+#fa-1 select {
+    margin-top: 10px;
+}
+
+#fa-2 .question-feedback-text {
+    margin: 0 25px;
+}
+
+#fa-2 .lesson-item-answer-item input,
+#fa-2 .lesson-item-answer-item label {
+    cursor: pointer;
+}
+
+.end {
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: yellow;
+    font-size: 24px;
+    border: 1px solid black;
+}
