@@ -1,9 +1,9 @@
 // initial setup
-// document.addEventListener('DOMContentLoaded', (event) => {
-//     window.localStorage.setItem("lessonItemCount", 0);
-//     document.getElementsByClassName("back-button")[0].classList.add("hidden");
-//     document.getElementsByClassName("back-button")[1].classList.add("hidden");
-// });
+document.addEventListener('DOMContentLoaded', (event) => {
+    window.localStorage.setItem("lessonItemCount", 0);
+    document.getElementsByClassName("back-button")[0].classList.add("hidden");
+    document.getElementsByClassName("back-button")[1].classList.add("hidden");
+});
 
 // user control
 
