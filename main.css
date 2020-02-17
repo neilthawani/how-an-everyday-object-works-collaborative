@@ -100,16 +100,12 @@ iframe {
     cursor: pointer;
 }
 
-#posttest .submit-button {
-    margin-right: 50px;
-}
-
-.submit-button button a,
+/* .submit-button button a,
 .submit-button button a:focus,
 .submit-button button a:visited {
     text-decoration: none;
     color: black;
-}
+} */
 
 select {
     font-size: 18px;

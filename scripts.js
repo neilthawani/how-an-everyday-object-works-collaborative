@@ -110,7 +110,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
         this.classList.add("selected");
     });
 
-    $("#pretest .submit-button").click(function() {
+    $("#pretest button.submit").click(function() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        debugger;
         this.classList.add("hidden");
         document.getElementsByClassName("back-button")[0].classList.remove("hidden");
         document.getElementsByClassName("continue-button")[0].classList.remove("hidden");
@@ -223,7 +226,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
         this.classList.add("selected");
     });
 
-    $("#posttest .submit-button").click(function() {
+    $("#posttest button.submit").click(function() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
         this.classList.add("hidden");
 
         // if question 1 answer is B, select correct feedback
