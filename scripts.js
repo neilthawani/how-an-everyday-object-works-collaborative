@@ -40,6 +40,8 @@ var navigateTo = function(el) {
       newLessonItemCount !== 2 && newLessonItemCount !== 8 && newLessonItemCount !== allInstructionalItems.length - 1) {
         document.getElementsByClassName("back-button")[0].classList.remove("hidden");
         document.getElementsByClassName("back-button")[1].classList.remove("hidden");
+        document.getElementsByClassName("continue-button")[0].classList.remove("hidden");
+        document.getElementsByClassName("continue-button")[1].classList.remove("hidden");
         document.getElementsByClassName("side-nav")[0].classList.remove("hidden");
     }
 
