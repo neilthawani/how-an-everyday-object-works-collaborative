@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     window.localStorage.setItem("lessonItemCount", 0);
     document.getElementsByClassName("back-button")[0].classList.add("hidden");
     document.getElementsByClassName("back-button")[1].classList.add("hidden");
-    // document.getElementsByClassName("side-nav")[0].classList.add("hidden");
+    document.getElementsByClassName("side-nav")[0].classList.add("hidden");
 });
 
 // user control
@@ -15,22 +15,56 @@ var navigateTo = function(el) {
     // hide menu
     allInstructionalItems[0].classList.add("hidden");
 
+    var lessonItemCount = parseInt(window.localStorage.getItem("lessonItemCount"), 10);
     var newLessonItemCount = parseInt(el.getAttribute("data-attr-item-index"), 10);
-    window.localStorage.setItem("lessonItemCount", newLessonItemCount);
 
-    allInstructionalItems[newLessonItemCount].classList.remove("hidden");
+    if (lessonItemCount < allInstructionalItems.length - 1) {
+        allInstructionalItems[lessonItemCount].classList.add("hidden");
+        allInstructionalItems[newLessonItemCount].classList.remove("hidden");
+        window.localStorage.setItem("lessonItemCount", newLessonItemCount);
+    }
+
+    if (newLessonItemCount === 2 || newLessonItemCount === 8 || newLessonItemCount === allInstructionalItems.length - 1 &&   $("#pretest .active").length === 0 || $("#posttest .active").length === 0) {
+        document.getElementsByClassName("back-button")[0].classList.add("hidden");
+        document.getElementsByClassName("continue-button")[0].classList.add("hidden");
+        document.getElementsByClassName("back-button")[1].classList.add("hidden");
+        document.getElementsByClassName("continue-button")[1].classList.add("hidden");
+        document.getElementsByClassName("side-nav")[0].classList.add("hidden");
+    }
+
+    if (newLessonItemCount === 0) {
+        document.getElementsByClassName("back-button")[0].classList.add("hidden");
+        document.getElementsByClassName("back-button")[1].classList.add("hidden");
+        document.getElementsByClassName("side-nav")[0].classList.add("hidden");
+    } else if (lessonItemCount >= 0 && lessonItemCount < allInstructionalItems.length - 1 &&
+      newLessonItemCount !== 2 && newLessonItemCount !== 8 && newLessonItemCount !== allInstructionalItems.length - 1) {
+        document.getElementsByClassName("back-button")[0].classList.remove("hidden");
+        document.getElementsByClassName("back-button")[1].classList.remove("hidden");
+        document.getElementsByClassName("side-nav")[0].classList.remove("hidden");
+    }
+
+    if (newLessonItemCount < allInstructionalItems.length) {
+        allInstructionalItems[lessonItemCount].classList.add("hidden");
+        allInstructionalItems[newLessonItemCount].classList.remove("hidden");
+    }
 
     if (newLessonItemCount === allInstructionalItems.length - 1) {
         document.getElementsByClassName("back-button")[0].classList.add("hidden");
         document.getElementsByClassName("continue-button")[0].classList.add("hidden");
         document.getElementsByClassName("back-button")[1].classList.add("hidden");
         document.getElementsByClassName("continue-button")[1].classList.add("hidden");
-        // document.getElementsByClassName("side-nav")[0].classList.add("hidden");
-    } else {
-        document.getElementsByClassName("back-button")[0].classList.remove("hidden");
-        document.getElementsByClassName("back-button")[1].classList.remove("hidden");
-        // document.getElementsByClassName("side-nav")[0].classList.remove("hidden");
+        document.getElementsByClassName("side-nav")[0].classList.add("hidden");
     }
+
+    if ($(".active").length > 0) {
+        document.getElementsByClassName("back-button")[0].classList.remove("hidden");
+        document.getElementsByClassName("continue-button")[0].classList.remove("hidden");
+        document.getElementsByClassName("back-button")[1].classList.remove("hidden");
+        document.getElementsByClassName("continue-button")[1].classList.remove("hidden");
+        document.getElementsByClassName("side-nav")[0].classList.remove("hidden");
+    }
+
+    stopVideo();
 }
 
 // back button
@@ -49,7 +83,7 @@ var goBack = function() {
     if (newLessonItemCount === 0) {
         document.getElementsByClassName("back-button")[0].classList.add("hidden");
         document.getElementsByClassName("back-button")[1].classList.add("hidden");
-        // document.getElementsByClassName("side-nav")[0].classList.add("hidden");
+        document.getElementsByClassName("side-nav")[0].classList.add("hidden");
     }
 
     stopVideo();
@@ -67,7 +101,7 @@ var continueLesson = function() {
     if (lessonItemValue >= 0 && lessonItemValue < allInstructionalItems.length - 1) {
         document.getElementsByClassName("back-button")[0].classList.remove("hidden");
         document.getElementsByClassName("back-button")[1].classList.remove("hidden");
-        // document.getElementsByClassName("side-nav")[0].classList.remove("hidden");
+        document.getElementsByClassName("side-nav")[0].classList.remove("hidden");
     }
 
     if (newLessonItemCount === 2 || newLessonItemCount === 8 || newLessonItemCount === allInstructionalItems.length - 1) {
@@ -75,12 +109,21 @@ var continueLesson = function() {
         document.getElementsByClassName("continue-button")[0].classList.add("hidden");
         document.getElementsByClassName("back-button")[1].classList.add("hidden");
         document.getElementsByClassName("continue-button")[1].classList.add("hidden");
-        // document.getElementsByClassName("side-nav")[0].classList.add("hidden");
+        document.getElementsByClassName("side-nav")[0].classList.add("hidden");
     }
 
     if (newLessonItemCount < allInstructionalItems.length) {
         allInstructionalItems[lessonItemCount].classList.add("hidden");
         allInstructionalItems[newLessonItemCount].classList.remove("hidden");
+        allInstructionalItems[newLessonItemCount].classList.add("active");
+    }
+
+    if (newLessonItemCount === 2 && $("#pretest .active").length > 0) {
+        document.getElementsByClassName("back-button")[0].classList.remove("hidden");
+        document.getElementsByClassName("continue-button")[0].classList.remove("hidden");
+        document.getElementsByClassName("back-button")[1].classList.remove("hidden");
+        document.getElementsByClassName("continue-button")[1].classList.remove("hidden");
+        document.getElementsByClassName("side-nav")[0].classList.remove("hidden");
     }
 
     stopVideo();
@@ -125,15 +168,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
         document.getElementsByClassName("continue-button")[0].classList.remove("hidden");
         document.getElementsByClassName("back-button")[1].classList.remove("hidden");
         document.getElementsByClassName("continue-button")[1].classList.remove("hidden");
-        // document.getElementsByClassName("side-nav")[0].classList.remove("hidden");
+        document.getElementsByClassName("side-nav")[0].classList.remove("hidden");
 
         // if question 1 answer is B, select correct feedback
         var selectedAnswer = $("#pretest-question-1 .selected")
         var selectedAnswer1 = selectedAnswer && selectedAnswer[0] && selectedAnswer[0].children[1].getAttribute("data-attr-answer-id");
         if (selectedAnswer1 === "1") {
             $("#pretest-question-1 .correct").removeClass("hidden");
+            $("#pretest-question-1 .correct").addClass("active");
         } else {
             $("#pretest-question-1 .incorrect").removeClass("hidden");
+            $("#pretest-question-1 .incorrect").addClass("active");
         }
 
         var pretestQuestionTwoAnswers = ["plug", "spring", "driver-pin", "key-pin", "keyway", "shearline", "case", "shafts"];
@@ -283,9 +328,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
 
         var questionFourAnswers = $("#posttest-question-4 input");
+        var checked = false;
         for (var i = 0; i < questionFourAnswers.length; i++) {
             if (i === 1 && questionFourAnswers[i].checked) {
                 $("#posttest-question-4 .correct").removeClass("hidden");
+                checked = true;
             } else if (questionFourAnswers[i].checked) {
                 if (i === 0) {
                     $("#posttest-question-4 .A").removeClass("hidden");
@@ -298,9 +345,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 if (i === 3) {
                     $("#posttest-question-4 .D").removeClass("hidden");
                 }
-            } else {
-                $("#posttest-question-4 .no-answer").removeClass("hidden");
+
+                checked = true;
             }
+        }
+
+
+
+        if (!checked) {
+            $("#posttest-question-4 .no-answer").removeClass("hidden");
         }
 
         $("#posttest .end").removeClass("hidden");

@@ -57,13 +57,13 @@ body {
 
 .course-content {
     display: flex;
+    position: relative;
 }
 
 .side-nav {
-    /* display: inline; */
-    height: 100%;
+    height: max-content;
     width: 200px;
-    position: relative;
+    position: absolute;
     z-index: 1;
     top: 0; /* Stay at the top */
     left: 0;
@@ -71,6 +71,7 @@ body {
     overflow-x: hidden;
     padding: 20px 50px;
     color: #f2f2f2;
+    margin-top: 50px;
 }
 
 .lesson-item {
