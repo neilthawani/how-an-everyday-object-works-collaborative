@@ -6,10 +6,52 @@ document.addEventListener('DOMContentLoaded', (event) => {
     document.getElementsByClassName("side-nav")[0].classList.add("hidden");
 });
 
+// helpers
+
+var hideBackButtons = function () {
+    document.getElementsByClassName("back-button")[0].classList.add("hidden");
+    document.getElementsByClassName("back-button")[1].classList.add("hidden");
+}
+
+var hideContButtons = function () {
+    document.getElementsByClassName("continue-button")[0].classList.add("hidden");
+    document.getElementsByClassName("continue-button")[1].classList.add("hidden");
+}
+
+var hideNav = function () {
+    document.getElementsByClassName("side-nav")[0].classList.add("hidden");
+}
+
+var showBackButtons = function () {
+    document.getElementsByClassName("back-button")[0].classList.remove("hidden");
+    document.getElementsByClassName("back-button")[1].classList.remove("hidden");
+}
+
+var showContButtons = function () {
+    document.getElementsByClassName("continue-button")[0].classList.remove("hidden");
+    document.getElementsByClassName("continue-button")[1].classList.remove("hidden");
+}
+
+var showNav = function () {
+    document.getElementsByClassName("side-nav")[0].classList.remove("hidden");
+}
+
+var hideAll = function () {
+    hideNav();
+    hideContButtons();
+    hideBackButtons();
+}
+
+var showAll = function () {
+    showNav();
+    showContButtons();
+    showBackButtons();
+}
+
 // user control
 
 // top-level menu nav
-var navigateTo = function(el) {
+var navigateTo = function (el) {
     var allInstructionalItems = document.getElementsByClassName("lesson-item");
 
     // hide menu
@@ -24,25 +66,16 @@ var navigateTo = function(el) {
         window.localStorage.setItem("lessonItemCount", newLessonItemCount);
     }
 
-    if (newLessonItemCount === 2 || newLessonItemCount === 8 || newLessonItemCount === allInstructionalItems.length - 1 &&   $("#pretest .active").length === 0 || $("#posttest .active").length === 0) {
-        document.getElementsByClassName("back-button")[0].classList.add("hidden");
-        document.getElementsByClassName("continue-button")[0].classList.add("hidden");
-        document.getElementsByClassName("back-button")[1].classList.add("hidden");
-        document.getElementsByClassName("continue-button")[1].classList.add("hidden");
-        document.getElementsByClassName("side-nav")[0].classList.add("hidden");
+    if (newLessonItemCount === 2 || newLessonItemCount === allInstructionalItems.length - 1 && $("#pretest .active").length === 0 || $("#posttest .active").length === 0) {
+        hideAll();
     }
 
     if (newLessonItemCount === 0) {
-        document.getElementsByClassName("back-button")[0].classList.add("hidden");
-        document.getElementsByClassName("back-button")[1].classList.add("hidden");
-        document.getElementsByClassName("side-nav")[0].classList.add("hidden");
+        hideNav();
+        hideBackButtons();
     } else if (lessonItemCount >= 0 && lessonItemCount < allInstructionalItems.length - 1 &&
-      newLessonItemCount !== 2 && newLessonItemCount !== 8 && newLessonItemCount !== allInstructionalItems.length - 1) {
-        document.getElementsByClassName("back-button")[0].classList.remove("hidden");
-        document.getElementsByClassName("back-button")[1].classList.remove("hidden");
-        document.getElementsByClassName("continue-button")[0].classList.remove("hidden");
-        document.getElementsByClassName("continue-button")[1].classList.remove("hidden");
-        document.getElementsByClassName("side-nav")[0].classList.remove("hidden");
+        newLessonItemCount !== 2 && newLessonItemCount !== allInstructionalItems.length - 1) {
+        showAll();
     }
 
     if (newLessonItemCount < allInstructionalItems.length) {
@@ -51,26 +84,18 @@ var navigateTo = function(el) {
     }
 
     if (newLessonItemCount === allInstructionalItems.length - 1) {
-        document.getElementsByClassName("back-button")[0].classList.add("hidden");
-        document.getElementsByClassName("continue-button")[0].classList.add("hidden");
-        document.getElementsByClassName("back-button")[1].classList.add("hidden");
-        document.getElementsByClassName("continue-button")[1].classList.add("hidden");
-        document.getElementsByClassName("side-nav")[0].classList.add("hidden");
+        hideAll();
     }
 
     if ($(".active").length > 0) {
-        document.getElementsByClassName("back-button")[0].classList.remove("hidden");
-        document.getElementsByClassName("continue-button")[0].classList.remove("hidden");
-        document.getElementsByClassName("back-button")[1].classList.remove("hidden");
-        document.getElementsByClassName("continue-button")[1].classList.remove("hidden");
-        document.getElementsByClassName("side-nav")[0].classList.remove("hidden");
+        showAll();
     }
 
     stopVideo();
 }
 
 // back button
-var goBack = function() {
+var goBack = function () {
     var lessonItemValue = window.localStorage.getItem("lessonItemCount"),
         lessonItemCount = parseInt(lessonItemValue, 10),
         allInstructionalItems = document.getElementsByClassName("lesson-item"),
@@ -83,16 +108,15 @@ var goBack = function() {
     }
 
     if (newLessonItemCount === 0) {
-        document.getElementsByClassName("back-button")[0].classList.add("hidden");
-        document.getElementsByClassName("back-button")[1].classList.add("hidden");
-        document.getElementsByClassName("side-nav")[0].classList.add("hidden");
+        hideNav();
+        hideBackButtons();
     }
 
     stopVideo();
 }
 
 // continue button
-var continueLesson = function() {
+var continueLesson = function () {
     var lessonItemValue = window.localStorage.getItem("lessonItemCount"),
         lessonItemCount = parseInt(lessonItemValue, 10),
         allInstructionalItems = document.getElementsByClassName("lesson-item"),
@@ -101,17 +125,12 @@ var continueLesson = function() {
     window.localStorage.setItem("lessonItemCount", newLessonItemCount);
 
     if (lessonItemValue >= 0 && lessonItemValue < allInstructionalItems.length - 1) {
-        document.getElementsByClassName("back-button")[0].classList.remove("hidden");
-        document.getElementsByClassName("back-button")[1].classList.remove("hidden");
-        document.getElementsByClassName("side-nav")[0].classList.remove("hidden");
+        showNav();
+        showBackButtons();
     }
 
-    if (newLessonItemCount === 2 || newLessonItemCount === 8 || newLessonItemCount === allInstructionalItems.length - 1) {
-        document.getElementsByClassName("back-button")[0].classList.add("hidden");
-        document.getElementsByClassName("continue-button")[0].classList.add("hidden");
-        document.getElementsByClassName("back-button")[1].classList.add("hidden");
-        document.getElementsByClassName("continue-button")[1].classList.add("hidden");
-        document.getElementsByClassName("side-nav")[0].classList.add("hidden");
+    if (newLessonItemCount === 2 || newLessonItemCount === allInstructionalItems.length - 1) {
+        hideAll();
     }
 
     if (newLessonItemCount < allInstructionalItems.length) {
@@ -121,11 +140,7 @@ var continueLesson = function() {
     }
 
     if (newLessonItemCount === 2 && $("#pretest .active").length > 0) {
-        document.getElementsByClassName("back-button")[0].classList.remove("hidden");
-        document.getElementsByClassName("continue-button")[0].classList.remove("hidden");
-        document.getElementsByClassName("back-button")[1].classList.remove("hidden");
-        document.getElementsByClassName("continue-button")[1].classList.remove("hidden");
-        document.getElementsByClassName("side-nav")[0].classList.remove("hidden");
+        showAll();
     }
 
     stopVideo();
@@ -142,7 +157,7 @@ var stopVideo = function () {
 
 // pre-test code
 document.addEventListener('DOMContentLoaded', (event) => {
-    $("#pretest-question-1 .lesson-item-answer-item").click(function() {
+    $("#pretest-question-1 .lesson-item-answer-item").click(function () {
         var answerIndex = this.getAttribute("data-attr-answer-id");
         var cousins = this.parentElement.parentElement.children;
         var siblings = [];
@@ -161,7 +176,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         this.classList.add("selected");
     });
 
-    $("#pretest button.submit").click(function() {
+    $("#pretest button.submit").click(function () {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
 
@@ -225,7 +240,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 document.addEventListener('DOMContentLoaded', (event) => {
     var fa1Answers = ["plug", "keyway", "case", "driver-pin", "key-pin", "spring", "shearline", "shafts"];
 
-    $(".fa-1-dropdown").change(function() {
+    $(".fa-1-dropdown").change(function () {
         var arrayIndex = parseInt(this.id.slice(this.id.length - 1), 10) - 1;
         if ($(`#${this.id}`)[0].value === fa1Answers[arrayIndex]) {
             this.style.backgroundColor = "#CBDBC5";
@@ -237,7 +252,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 // fa-2 code
 document.addEventListener('DOMContentLoaded', (event) => {
-    $("#fa-2 input").change(function() {
+    $("#fa-2 input").change(function () {
         var feedbackBoxes = $("#fa-2 .question-feedback-text");
 
         for (var i = 0; i < feedbackBoxes.length; i++) {
@@ -261,7 +276,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 // posttest code
 document.addEventListener('DOMContentLoaded', (event) => {
-    $("#posttest-question-1 .lesson-item-answer-item").click(function() {
+    $("#posttest-question-1 .lesson-item-answer-item").click(function () {
         var answerIndex = this.getAttribute("data-attr-answer-id");
         var cousins = this.parentElement.parentElement.children;
         var siblings = [];
@@ -280,7 +295,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         this.classList.add("selected");
     });
 
-    $("#posttest button.submit").click(function() {
+    $("#posttest button.submit").click(function () {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
         this.classList.add("hidden");
