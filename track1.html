@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" prefix="og: http://ogp.me/ns#">
+
+<head>
+  <title>
+    Track 1 - How a Pin Tumbler Lock Works
+  </title>
+
+  <base href="http://neilthawani.github.io/how-an-everyday-object-works-collaborative/" />
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+
+  <meta property="og:type" content="website" />
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="scripts.js"></script>
+  <link type="text/css" href="main.css" rel="stylesheet" />
+</head>
+
+<body>
+  <h1 class="text-center course-title">How a Pin Tumbler Lock Works</h1>
+
+  <div class="course-content">
+    <div class="side-nav">
+      <p class="lesson-nav-item" onclick="navigateTo(this)" data-attr-item-index="1">
+        1. Introduction
+      </p>
+      <p class="lesson-nav-item" onclick="navigateTo(this)" data-attr-item-index="2">
+        2. Pre-Test
+      </p>
+      <p class="lesson-nav-item" onclick="navigateTo(this)" data-attr-item-index="3">
+        3. Video: Pin Tumbler Lock Components
+      </p>
+      <p class="lesson-nav-item" onclick="navigateTo(this)" data-attr-item-index="4">
+        4. Formative Assessment: Pin Tumbler Lock Components
+      </p>
+      <p class="lesson-nav-item" onclick="navigateTo(this)" data-attr-item-index="5">
+        5. Group Activity
+      </p>
+      <p class="lesson-nav-item" onclick="navigateTo(this)" data-attr-item-index="6">
+        6. Master Key Hypothesis
+      </p>
+      <p class="lesson-nav-item" onclick="navigateTo(this)" data-attr-item-index="7">
+        7. Video: Master Keys
+      </p>
+      <p class="lesson-nav-item" onclick="navigateTo(this)" data-attr-item-index="8">
+        8. Formative Assessment: Master Key
+      </p>
+      <p class="lesson-nav-item" onclick="navigateTo(this)" data-attr-item-index="9">
+        9. Post-Test Landing Page
+      </p>
+      <p class="lesson-nav-item" onclick="navigateTo(this)" data-attr-item-index="10">
+        10. Post-Test
+      </p>
+    </div>
+
+    <div class="student-content">
+      <div class="buttons">
+        <button class="continue-button" onclick="continueLesson()">
+          Continue &gt;
+        </button>
+        <button class="back-button" onclick="goBack()">&lt; Back</button>
+      </div>
+
+      <div class="lesson-item nav-menu" data-attr-item-number="0">
+        <p class="lesson-nav-item" onclick="navigateTo(this)" data-attr-item-index="1">
+          1. Introduction
+        </p>
+        <p class="lesson-nav-item" onclick="navigateTo(this)" data-attr-item-index="2">
+          2. Pre-Test
+        </p>
+        <p class="lesson-nav-item" onclick="navigateTo(this)" data-attr-item-index="3">
+          3. Video: Pin Tumbler Lock Components
+        </p>
+        <p class="lesson-nav-item" onclick="navigateTo(this)" data-attr-item-index="4">
+          4. Formative Assessment: Pin Tumbler Lock Components
+        </p>
+        <p class="lesson-nav-item" onclick="navigateTo(this)" data-attr-item-index="5">
+          5. Group Activity
+        </p>
+        <p class="lesson-nav-item" onclick="navigateTo(this)" data-attr-item-index="6">
+          6. Master Key Hypothesis
+        </p>
+        <p class="lesson-nav-item" onclick="navigateTo(this)" data-attr-item-index="7">
+          7. Video: Master Keys
+        </p>
+        <p class="lesson-nav-item" onclick="navigateTo(this)" data-attr-item-index="8">
+          8. Formative Assessment: Master Key
+        </p>
+        <p class="lesson-nav-item" onclick="navigateTo(this)" data-attr-item-index="9">
+          9. Post-Test Landing Page
+        </p>
+        <p class="lesson-nav-item" onclick="navigateTo(this)" data-attr-item-index="10">
+          10. Post-Test
+        </p>
+      </div>
+
+      <div class="lesson-item hidden" data-attr-item-number="1">
+        <iframe width="800" height="450" class="youtube-video"
+          src="https://www.youtube.com/embed/VMgTFVYNbfs?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <div id="pretest" class="lesson-item hidden" data-attr-item-number="2">
+        <h2 class="center">Pre-Test</h2>
+
+        <div class="pretest-question" id="pretest-question-1">
+          <p class="lesson-item-question">
+            1. Which one is the lock that matches the key?
+          </p>
+
+          <div class="lesson-item-answer">
+            <div class="lesson-item-answer-row">
+              <div class="lesson-item-answer-item">
+                <p class="lesson-item-answer-text">A</p>
+                <img class="lesson-item-answer-image" data-attr-answer-id="0" src="images/pre-test/1/pretest-1-A.jpeg"
+                  width="250" />
+              </div>
+
+              <div class="lesson-item-answer-item">
+                <p class="lesson-item-answer-text">B</p>
+                <img class="lesson-item-answer-image" data-attr-answer-id="1" src="images/pre-test/1/pretest-1-B.jpeg"
+                  width="250" />
+              </div>
+            </div>
+
+            <div class="lesson-item-answer-row">
+              <div class="lesson-item-answer-item">
+                <p class="lesson-item-answer-text">C</p>
+                <img class="lesson-item-answer-image" data-attr-answer-id="2" src="images/pre-test/1/pretest-1-C.jpeg"
+                  width="250" />
+              </div>
+
+              <div class="lesson-item-answer-item">
+                <p class="lesson-item-answer-text">D</p>
+                <img class="lesson-item-answer-image" data-attr-answer-id="3" src="images/pre-test/1/pretest-1-D.jpeg"
+                  width="250" />
+              </div>
+            </div>
+          </div>
+
+          <div class="question-feedback-text incorrect hidden">
+            <h3>Correct Answer:</h3>
+            <span>
+              B
+            </span>
+          </div>
+
+          <div class="question-feedback-text correct hidden">
+            <h3>Correct!</h3>
+          </div>
+        </div>
+
+        <div class="pretest-question" id="pretest-question-2">
+          <p class="lesson-item-question">
+            2. Below are the components of a pin tumbler lock. Select the
+            corresponding correct name from the dropdown menu.
+          </p>
+
+          <div class="lesson-item-answer-row">
+            <div class="lesson-item-answer-item">
+              <img class="pretest-question-2" src="images/pre-test/2/plug.png" width="200" />
+              <select class="pretest-dropdown-question-2" id="dropdown-1">
+                <option value="spring">Spring</option>
+                <option value="case">Case</option>
+                <option value="plug">Plug</option>
+                <option value="shearline">Shearline</option>
+                <option value="keyway">Keyway</option>
+                <option value="shafts">Shafts</option>
+                <option value="driver-pin">Driver pin</option>
+                <option value="key-pin">Key pin</option>
+              </select>
+            </div>
+
+            <div class="lesson-item-answer-item">
+              <img class="pretest-question-2" src="images/pre-test/2/spring.png" width="200" />
+              <select class="pretest-dropdown-question-2" id="dropdown-2">
+                <option value="spring">Spring</option>
+                <option value="case">Case</option>
+                <option value="plug">Plug</option>
+                <option value="shearline">Shearline</option>
+                <option value="keyway">Keyway</option>
+                <option value="shafts">Shafts</option>
+                <option value="driver-pin">Driver pin</option>
+                <option value="key-pin">Key pin</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="lesson-item-answer-row">
+            <div class="lesson-item-answer-item">
+              <img class="pretest-question-2" src="images/pre-test/2/driver-pin.png" width="200" />
+              <select class="pretest-dropdown-question-2" id="dropdown-3">
+                <option value="spring">Spring</option>
+                <option value="case">Case</option>
+                <option value="plug">Plug</option>
+                <option value="shearline">Shearline</option>
+                <option value="keyway">Keyway</option>
+                <option value="shafts">Shafts</option>
+                <option value="driver-pin">Driver pin</option>
+                <option value="key-pin">Key pin</option>
+              </select>
+            </div>
+
+            <div class="lesson-item-answer-item">
+              <img class="pretest-question-2" src="images/pre-test/2/key-pin.png" width="200" />
+              <select class="pretest-dropdown-question-2" id="dropdown-4">
+                <option value="spring">Spring</option>
+                <option value="case">Case</option>
+                <option value="plug">Plug</option>
+                <option value="shearline">Shearline</option>
+                <option value="keyway">Keyway</option>
+                <option value="shafts">Shafts</option>
+                <option value="driver-pin">Driver pin</option>
+                <option value="key-pin">Key pin</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="lesson-item-answer-row">
+            <div class="lesson-item-answer-item">
+              <img class="pretest-question-2" src="images/pre-test/2/keyway.png" width="200" />
+              <select class="pretest-dropdown-question-2" id="dropdown-5">
+                <option value="spring">Spring</option>
+                <option value="case">Case</option>
+                <option value="plug">Plug</option>
+                <option value="shearline">Shearline</option>
+                <option value="keyway">Keyway</option>
+                <option value="shafts">Shafts</option>
+                <option value="driver-pin">Driver pin</option>
+                <option value="key-pin">Key pin</option>
+              </select>
+            </div>
+
+            <div class="lesson-item-answer-item">
+              <img class="pretest-question-2" src="images/pre-test/2/shearline.png" width="200" />
+              <select class="pretest-dropdown-question-2" id="dropdown-6">
+                <option value="spring">Spring</option>
+                <option value="case">Case</option>
+                <option value="plug">Plug</option>
+                <option value="shearline">Shearline</option>
+                <option value="keyway">Keyway</option>
+                <option value="shafts">Shafts</option>
+                <option value="driver-pin">Driver pin</option>
+                <option value="key-pin">Key pin</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="lesson-item-answer-row">
+            <div class="lesson-item-answer-item">
+              <img class="pretest-question-2" src="images/pre-test/2/case.png" width="200" />
+              <select class="pretest-dropdown-question-2" id="dropdown-7">
+                <option value="spring">Spring</option>
+                <option value="case">Case</option>
+                <option value="plug">Plug</option>
+                <option value="shearline">Shearline</option>
+                <option value="keyway">Keyway</option>
+                <option value="shafts">Shafts</option>
+                <option value="driver-pin">Driver pin</option>
+                <option value="key-pin">Key pin</option>
+              </select>
+            </div>
+
+            <div class="lesson-item-answer-item">
+              <img class="pretest-question-2" src="images/pre-test/2/shafts.png" width="200" />
+              <select class="pretest-dropdown-question-2" id="dropdown-8">
+                <option value="spring">Spring</option>
+                <option value="case">Case</option>
+                <option value="plug">Plug</option>
+                <option value="shearline">Shearline</option>
+                <option value="keyway">Keyway</option>
+                <option value="shafts">Shafts</option>
+                <option value="driver-pin">Driver pin</option>
+                <option value="key-pin">Key pin</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="pretest-question" id="pretest-question-3">
+          <p class="lesson-item-question">
+            3. Given the structure of the lock, briefly explain what happens
+            when we try to open a pin tumbler lock with a key.
+          </p>
+
+          <div class="lesson-item-answer-row">
+            <img src="images/pre-test/3/lock.png" width="300" />
+            <textarea cols="50"></textarea>
+          </div>
+
+          <p class="question-feedback-text hidden">
+            <strong>Your answer should be something like:</strong>
+            <em>
+              Each key has its own unique shape. The ridges on the key have to
+              match exactly with the lock for it to work. When a key is
+              inserted into the keyway, it pushes the key pins and the springs
+              will compress. For the plug to turn, the pins must line up with
+              the shear line.
+            </em>
+          </p>
+        </div>
+
+        <div class="pretest-question" id="pretest-question-4">
+          <p class="lesson-item-question">
+            4. What happens when we try to open a pin tumbler lock with a key?
+          </p>
+
+          <div class="lesson-item-answer-item">
+            When you insert the key into the
+            <select class="pretest-dropdown-question-4" id="pretest-question-4-dropdown-1">
+              <option value="springs">springs</option>
+              <option value="shearline">shear line</option>
+              <option value="keyway">keyway</option>
+              <option value="shaft">shaft</option>
+              <option value="pin">pin</option>
+            </select>
+            and turn it, the
+            <select class="pretest-dropdown-question-4" id="pretest-question-4-dropdown-2">
+              <option value="springs">springs</option>
+              <option value="shearline">shear line</option>
+              <option value="keyway">keyway</option>
+              <option value="shaft">shaft</option>
+              <option value="pin">pin</option>
+            </select>
+            compress and the
+            <select class="pretest-dropdown-question-4" id="pretest-question-4-dropdown-3">
+              <option value="springs">springs</option>
+              <option value="shearline">shear line</option>
+              <option value="keyway">keyway</option>
+              <option value="shaft">shaft</option>
+              <option value="pin">pin</option>
+            </select>
+            along each
+            <select class="pretest-dropdown-question-4" id="pretest-question-4-dropdown-4">
+              <option value="springs">springs</option>
+              <option value="shearline">shear line</option>
+              <option value="keyway">keyway</option>
+              <option value="shaft">shaft</option>
+              <option value="pin">pin</option>
+            </select>
+            align with the
+            <select class="pretest-dropdown-question-4" id="pretest-question-4-dropdown-5">
+              <option value="springs">springs</option>
+              <option value="shearline">shear line</option>
+              <option value="keyway">keyway</option>
+              <option value="shaft">shaft</option>
+              <option value="pin">pin</option>
+            </select>
+            , and the lock opens.
+          </div>
+
+          <div class="question-feedback-text hidden">
+            <h3>Feedback:</h3>
+            <span>
+              Want to verify your answer? Continue to see the instructional
+              video.
+            </span>
+          </div>
+
+          <div class="submit-button">
+            <button class="submit">Submit</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="lesson-item hidden" data-attr-item-number="3">
+        <iframe width="800" height="450" class="youtube-video"
+          src="https://www.youtube.com/embed/dkFsyLvmW94?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0"
+          allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <div id="fa-1" class="lesson-item hidden" data-attr-item-number="4">
+        <h2>The Inside of the Lock</h2>
+
+        <p class="lesson-item-question">
+          Below are the components of a pin tumbler lock. Select the correct
+          name of the part from the dropdown menu. If it's correct, the menu
+          will turn green. Otherwise, it will turn red. You can try again if
+          you get it wrong!
+        </p>
+
+        <div class="lesson-item-answer-row">
+          <div class="lesson-item-answer-item">
+            <img src="images/pre-test/2/plug.png" width="200" />
+            <select class="fa-1-dropdown" id="fa-1-dropdown-1">
+              <option value="spring">Spring</option>
+              <option value="case">Case</option>
+              <option value="plug">Plug</option>
+              <option value="shearline">Shearline</option>
+              <option value="keyway">Keyway</option>
+              <option value="shafts">Shafts</option>
+              <option value="driver-pin">Driver pin</option>
+              <option value="key-pin">Key pin</option>
+            </select>
+          </div>
+
+          <div class="lesson-item-answer-item">
+            <img src="images/pre-test/2/keyway.png" width="200" />
+            <select class="fa-1-dropdown" id="fa-1-dropdown-2">
+              <option value="spring">Spring</option>
+              <option value="case">Case</option>
+              <option value="plug">Plug</option>
+              <option value="shearline">Shearline</option>
+              <option value="keyway">Keyway</option>
+              <option value="shafts">Shafts</option>
+              <option value="driver-pin">Driver pin</option>
+              <option value="key-pin">Key pin</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="lesson-item-answer-row">
+          <div class="lesson-item-answer-item">
+            <img src="images/pre-test/2/case.png" width="200" />
+            <select class="fa-1-dropdown" id="fa-1-dropdown-3">
+              <option value="spring">Spring</option>
+              <option value="case">Case</option>
+              <option value="plug">Plug</option>
+              <option value="shearline">Shearline</option>
+              <option value="keyway">Keyway</option>
+              <option value="shafts">Shafts</option>
+              <option value="driver-pin">Driver pin</option>
+              <option value="key-pin">Key pin</option>
+            </select>
+          </div>
+        </div>
+
+        <h2>The Outside of the Lock</h2>
+
+        <div class="lesson-item-answer-row">
+          <div class="lesson-item-answer-item">
+            <img src="images/pre-test/2/driver-pin.png" width="200" />
+            <select class="fa-1-dropdown" id="fa-1-dropdown-4">
+              <option value="spring">Spring</option>
+              <option value="case">Case</option>
+              <option value="plug">Plug</option>
+              <option value="shearline">Shearline</option>
+              <option value="keyway">Keyway</option>
+              <option value="shafts">Shafts</option>
+              <option value="driver-pin">Driver pin</option>
+              <option value="key-pin">Key pin</option>
+            </select>
+          </div>
+
+          <div class="lesson-item-answer-item">
+            <img src="images/pre-test/2/key-pin.png" width="200" />
+            <select class="fa-1-dropdown" id="fa-1-dropdown-5">
+              <option value="spring">Spring</option>
+              <option value="case">Case</option>
+              <option value="plug">Plug</option>
+              <option value="shearline">Shearline</option>
+              <option value="keyway">Keyway</option>
+              <option value="shafts">Shafts</option>
+              <option value="driver-pin">Driver pin</option>
+              <option value="key-pin">Key pin</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="lesson-item-answer-row">
+          <div class="lesson-item-answer-item">
+            <img src="images/pre-test/2/spring.png" width="200" />
+            <select class="fa-1-dropdown" id="fa-1-dropdown-6">
+              <option value="spring">Spring</option>
+              <option value="case">Case</option>
+              <option value="plug">Plug</option>
+              <option value="shearline">Shearline</option>
+              <option value="keyway">Keyway</option>
+              <option value="shafts">Shafts</option>
+              <option value="driver-pin">Driver pin</option>
+              <option value="key-pin">Key pin</option>
+            </select>
+          </div>
+
+          <div class="lesson-item-answer-item">
+            <img src="images/pre-test/2/shearline.png" width="200" />
+            <select class="fa-1-dropdown" id="fa-1-dropdown-7">
+              <option value="spring">Spring</option>
+              <option value="case">Case</option>
+              <option value="plug">Plug</option>
+              <option value="shearline">Shearline</option>
+              <option value="keyway">Keyway</option>
+              <option value="shafts">Shafts</option>
+              <option value="driver-pin">Driver pin</option>
+              <option value="key-pin">Key pin</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="lesson-item-answer-row">
+          <div class="lesson-item-answer-item">
+            <img src="images/pre-test/2/shafts.png" width="200" />
+            <select class="fa-1-dropdown" id="fa-1-dropdown-8">
+              <option value="spring">Spring</option>
+              <option value="case">Case</option>
+              <option value="plug">Plug</option>
+              <option value="shearline">Shearline</option>
+              <option value="keyway">Keyway</option>
+              <option value="shafts">Shafts</option>
+              <option value="driver-pin">Driver pin</option>
+              <option value="key-pin">Key pin</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-menu lesson-item text-center hidden" data-attr-item-number="5">
+        <h2 class="select-track-header">
+          Now we'll start the group section.
+        </h2>
+
+        <h2 class="select-track-header">
+          Please ask your classmate to work with you on this computer.
+        </h2>
+      </div>
+
+      <div class="nav-menu lesson-item text-center hidden" data-attr-item-number="6">
+        <h2 class="select-track-header">
+          Share with each other what you learned in your tracks about the pin tumbler lock components and mechanism.
+        </h2>
+      </div>
+
+      <div class="lesson-item hidden" data-attr-item-number="7">
+        <iframe width="800" height="450" class="youtube-video"
+          src="https://www.youtube.com/embed/2RDmMGuMsU0?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0"
+          allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <div id="fa-3" class="lesson-item hidden" data-attr-item-number="8">
+        <h2>How the Master Key System Works</h2>
+
+        <p class="lesson-item-question">
+          The master key system is a system that allows two or more keys to open one lock. How does a master key work?
+        </p>
+
+        <div class="lesson-item-answer-row">
+          <img src="images/pre-test/5/master-key.png" width="300" />
+          <textarea cols="50"></textarea>
+        </div>
+
+        <div class="submit-button">
+          <button class="submit">Submit</button>
+        </div>
+
+        <p class="question-feedback-text hidden">
+          <strong>Your answer should be something like:</strong>
+          <em>
+            A master key system will have one or more shafts with a spacer
+            pin, so different pins in the shafts can be raised to the same
+            level to open the lock.
+          </em>
+        </p>
+      </div>
+
+      <div class="nav-menu lesson-item text-center hidden" data-attr-item-number="9">
+        <h2 class="select-track-header">
+          Next is your post-test. Please clarify any remaining questions with your teammate before they return to their computer for their own post-test.
+        </h2>
+      </div>
+
+      <div id="posttest" class="lesson-item hidden" data-attr-item-number="10">
+        <h2 class="center">Post-Test</h2>
+
+        <div class="posttest-question" id="posttest-question-1">
+          <p class="lesson-item-question">
+            1. Which one is the lock that matches the key?
+          </p>
+
+          <div class="lesson-item-answer">
+            <div class="lesson-item-answer-row">
+              <div class="lesson-item-answer-item">
+                <p class="lesson-item-answer-text">A</p>
+                <img class="lesson-item-answer-image" data-attr-answer-id="0" src="images/pre-test/1/pretest-1-A.jpeg"
+                  width="250" />
+              </div>
+
+              <div class="lesson-item-answer-item">
+                <p class="lesson-item-answer-text">B</p>
+                <img class="lesson-item-answer-image" data-attr-answer-id="1" src="images/pre-test/1/pretest-1-B.jpeg"
+                  width="250" />
+              </div>
+            </div>
+
+            <div class="lesson-item-answer-row">
+              <div class="lesson-item-answer-item">
+                <p class="lesson-item-answer-text">C</p>
+                <img class="lesson-item-answer-image" data-attr-answer-id="2" src="images/pre-test/1/pretest-1-C.jpeg"
+                  width="250" />
+              </div>
+
+              <div class="lesson-item-answer-item">
+                <p class="lesson-item-answer-text">D</p>
+                <img class="lesson-item-answer-image" data-attr-answer-id="3" src="images/pre-test/1/pretest-1-D.jpeg"
+                  width="250" />
+              </div>
+            </div>
+          </div>
+
+          <div class="question-feedback-text incorrect A hidden">
+            <h3>You answered A. This is incorrect.</h3>
+            <span>
+              It is the pins along the shear line - not the lock - that
+              matches the shape of the key.
+            </span>
+          </div>
+
+          <div class="question-feedback-text correct hidden">
+            <h3>You answered B. This is correct!</h3>
+            <span>
+              When you insert the key into the keyway and turn it, the springs
+              compress and the pins along each shaft align with the shear
+              line, opening the lock.
+            </span>
+          </div>
+
+          <div class="question-feedback-text incorrect C hidden">
+            <h3>You answered C. This is incorrect.</h3>
+            <span>
+              The height of the key pins should match the ridges on the key.
+              The three pins in this lock don't align along the shear line,
+              and the lock won't open. height.
+            </span>
+          </div>
+
+          <div class="question-feedback-text incorrect D hidden">
+            <h3>You answered D. This is incorrect.</h3>
+            <span>
+              Each shaft is missing a driver pin. This is not a working pin
+              tumbler lock.
+            </span>
+          </div>
+
+          <div class="question-feedback-text no-answer hidden">
+            <h3>B is the correct answer.</h3>
+            <span>
+              When you insert the key into the keyway and turn it, the springs
+              compress and the pins along each shaft align with the shear
+              line, opening the lock.
+            </span>
+          </div>
+        </div>
+
+        <div class="posttest-question" id="posttest-question-2">
+          <p class="lesson-item-question">
+            2. Below are the components of a pin tumbler lock. Select the
+            corresponding correct name from the dropdown menu.
+          </p>
+
+          <div class="lesson-item-answer-row">
+            <div class="lesson-item-answer-item">
+              <img class="posttest-question-2" src="images/pre-test/2/plug.png" width="200" />
+              <select class="posttest-dropdown-question-2" id="dropdown-1">
+                <option value="spring">Spring</option>
+                <option value="case">Case</option>
+                <option value="plug">Plug</option>
+                <option value="shearline">Shearline</option>
+                <option value="keyway">Keyway</option>
+                <option value="shafts">Shafts</option>
+                <option value="driver-pin">Driver pin</option>
+                <option value="key-pin">Key pin</option>
+              </select>
+            </div>
+
+            <div class="lesson-item-answer-item">
+              <img class="posttest-question-2" src="images/pre-test/2/spring.png" width="200" />
+              <select class="posttest-dropdown-question-2" id="dropdown-2">
+                <option value="spring">Spring</option>
+                <option value="case">Case</option>
+                <option value="plug">Plug</option>
+                <option value="shearline">Shearline</option>
+                <option value="keyway">Keyway</option>
+                <option value="shafts">Shafts</option>
+                <option value="driver-pin">Driver pin</option>
+                <option value="key-pin">Key pin</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="lesson-item-answer-row">
+            <div class="lesson-item-answer-item">
+              <img class="posttest-question-2" src="images/pre-test/2/driver-pin.png" width="200" />
+              <select class="posttest-dropdown-question-2" id="dropdown-3">
+                <option value="spring">Spring</option>
+                <option value="case">Case</option>
+                <option value="plug">Plug</option>
+                <option value="shearline">Shearline</option>
+                <option value="keyway">Keyway</option>
+                <option value="shafts">Shafts</option>
+                <option value="driver-pin">Driver pin</option>
+                <option value="key-pin">Key pin</option>
+              </select>
+            </div>
+
+            <div class="lesson-item-answer-item">
+              <img class="posttest-question-2" src="images/pre-test/2/key-pin.png" width="200" />
+              <select class="posttest-dropdown-question-2" id="dropdown-4">
+                <option value="spring">Spring</option>
+                <option value="case">Case</option>
+                <option value="plug">Plug</option>
+                <option value="shearline">Shearline</option>
+                <option value="keyway">Keyway</option>
+                <option value="shafts">Shafts</option>
+                <option value="driver-pin">Driver pin</option>
+                <option value="key-pin">Key pin</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="lesson-item-answer-row">
+            <div class="lesson-item-answer-item">
+              <img class="posttest-question-2" src="images/pre-test/2/keyway.png" width="200" />
+              <select class="posttest-dropdown-question-2" id="dropdown-5">
+                <option value="spring">Spring</option>
+                <option value="case">Case</option>
+                <option value="plug">Plug</option>
+                <option value="shearline">Shearline</option>
+                <option value="keyway">Keyway</option>
+                <option value="shafts">Shafts</option>
+                <option value="driver-pin">Driver pin</option>
+                <option value="key-pin">Key pin</option>
+              </select>
+            </div>
+
+            <div class="lesson-item-answer-item">
+              <img class="posttest-question-2" src="images/pre-test/2/shearline.png" width="200" />
+              <select class="posttest-dropdown-question-2" id="dropdown-6">
+                <option value="spring">Spring</option>
+                <option value="case">Case</option>
+                <option value="plug">Plug</option>
+                <option value="shearline">Shearline</option>
+                <option value="keyway">Keyway</option>
+                <option value="shafts">Shafts</option>
+                <option value="driver-pin">Driver pin</option>
+                <option value="key-pin">Key pin</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="lesson-item-answer-row">
+            <div class="lesson-item-answer-item">
+              <img class="posttest-question-2" src="images/pre-test/2/case.png" width="200" />
+              <select class="posttest-dropdown-question-2" id="dropdown-7">
+                <option value="spring">Spring</option>
+                <option value="case">Case</option>
+                <option value="plug">Plug</option>
+                <option value="shearline">Shearline</option>
+                <option value="keyway">Keyway</option>
+                <option value="shafts">Shafts</option>
+                <option value="driver-pin">Driver pin</option>
+                <option value="key-pin">Key pin</option>
+              </select>
+            </div>
+
+            <div class="lesson-item-answer-item">
+              <img class="posttest-question-2" src="images/pre-test/2/shafts.png" width="200" />
+              <select class="posttest-dropdown-question-2" id="dropdown-8">
+                <option value="spring">Spring</option>
+                <option value="case">Case</option>
+                <option value="plug">Plug</option>
+                <option value="shearline">Shearline</option>
+                <option value="keyway">Keyway</option>
+                <option value="shafts">Shafts</option>
+                <option value="driver-pin">Driver pin</option>
+                <option value="key-pin">Key pin</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="posttest-question" id="posttest-question-3">
+          <p class="lesson-item-question">
+            3. What happens when we try to open a pin tumbler lock with a key?
+          </p>
+
+          <div class="lesson-item-answer-item">
+            When you insert the key into the
+            <select class="posttest-dropdown-question-3" id="posttest-question-4-dropdown-1">
+              <option value="springs">springs</option>
+              <option value="shearline">shear line</option>
+              <option value="keyway">keyway</option>
+              <option value="shaft">shaft</option>
+              <option value="pin">pin</option>
+            </select>
+            and turn it, the
+            <select class="posttest-dropdown-question-3" id="posttest-question-4-dropdown-2">
+              <option value="springs">springs</option>
+              <option value="shearline">shear line</option>
+              <option value="keyway">keyway</option>
+              <option value="shaft">shaft</option>
+              <option value="pin">pin</option>
+            </select>
+            compress and the
+            <select class="posttest-dropdown-question-3" id="posttest-question-4-dropdown-3">
+              <option value="springs">springs</option>
+              <option value="shearline">shear line</option>
+              <option value="keyway">keyway</option>
+              <option value="shaft">shaft</option>
+              <option value="pin">pin</option>
+            </select>
+            along each
+            <select class="posttest-dropdown-question-3" id="posttest-question-4-dropdown-4">
+              <option value="springs">springs</option>
+              <option value="shearline">shear line</option>
+              <option value="keyway">keyway</option>
+              <option value="shaft">shaft</option>
+              <option value="pin">pin</option>
+            </select>
+            align with the
+            <select class="posttest-dropdown-question-3" id="posttest-question-4-dropdown-5">
+              <option value="springs">springs</option>
+              <option value="shearline">shear line</option>
+              <option value="keyway">keyway</option>
+              <option value="shaft">shaft</option>
+              <option value="pin">pin</option>
+            </select>
+            , and the lock opens.
+          </div>
+
+          <div class="question-feedback-text hidden">
+            <h3>Feedback:</h3>
+            <span>
+              Want to verify your answer? Collaborate with your partner during the Group Activity.
+            </span>
+          </div>
+        </div>
+
+        <div class="posttest-question" id="posttest-question-4">
+          <p class="lesson-item-question">
+            4. The master key system is a system that allows two or more keys
+            to open one lock. How does a master key work?
+          </p>
+
+          <div class="lesson-item-answer-row">
+            <img src="images/pre-test/5/master-key.png" height="200" />
+            <div class="lesson-item-answer-item text-left">
+              <input type="radio" name="master-key" value="A" id="A" />
+              <label for="A">A. It has the essential characteristics of all possible
+                keys.</label><br />
+
+              <input type="radio" name="master-key" value="B" id="B" />
+              <label for="B">B. The lock will have one or more shafts with a spacer
+                pin.</label><br />
+
+              <input type="radio" name="master-key" value="C" id="C" />
+              <label for="C">C. The master key can change its shape accordingly.</label><br />
+
+              <input type="radio" name="master-key" value="D" id="D" />
+              <label for="D">D. The first key fits in three spaces while master key fits
+                in three other spaces, and either would work.</label><br />
+            </div>
+          </div>
+
+          <div class="question-feedback-text incorrect A hidden">
+            <h3>A is incorrect.</h3>
+            <span>
+              For the master key to work, there must be an extra pin in at
+              least one of the lock's vertical shafts. This is called the
+              spacer pin.
+            </span>
+          </div>
+          <div class="question-feedback-text correct B hidden">
+            <h3>B is correct!</h3>
+            <span>
+              A master key system will have one or more shafts with a spacer
+              pin, so different pins in the shafts can be raised to the same
+              level to open the lock.
+            </span>
+          </div>
+          <div class="question-feedback-text incorrect C hidden">
+            <h3>C is incorrect.</h3>
+            <span>
+              The master key can not change its shape. For the master key to
+              work, there must be an extra spacer pin in at least one of the
+              lock's vertical shafts to match the master key's ridges.
+            </span>
+          </div>
+          <div class="question-feedback-text incorrect D hidden">
+            <h3>D is incorrect.</h3>
+            <span>
+              A master key is used to open all locks, while a normal key opens
+              just one lock. The spacer pin is the reason the master key
+              aligns the pins along the shear line.
+            </span>
+          </div>
+          <div class="question-feedback-text no-answer hidden">
+            <h3>B is the correct answer.</h3>
+            <span>
+              A master key system will have one or more shafts with a spacer
+              pin, so different pins in the shafts can be raised to the same
+              level to open the lock.
+            </span>
+          </div>
+
+          <div class="submit-button">
+            <button class="submit">Submit</button>
+          </div>
+        </div>
+
+        <div class="text-center end hidden">
+          <h3>You finished the course!</h3>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button class="continue-button" onclick="continueLesson()">
+          Continue &gt;
+        </button>
+        <button class="back-button" onclick="goBack()">&lt; Back</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
