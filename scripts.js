@@ -274,6 +274,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 });
 
+// fa-3 code
+document.addEventListener('DOMContentLoaded', (event) => {
+    $("#fa-3 .submit").click(function() {
+        $("#fa-3 .submit-button").addClass("hidden");
+        $("#fa-3 .question-feedback-text").removeClass("hidden");
+    });
+});
+
 // posttest code
 document.addEventListener('DOMContentLoaded', (event) => {
     $("#posttest-question-1 .lesson-item-answer-item").click(function () {

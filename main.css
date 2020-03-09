@@ -37,7 +37,31 @@ body {
 }
 
 .nav-menu {
-  padding-top: 25px;
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
+
+.select-track-header {
+    font-weight: 400;
+}
+
+.select-track-links {
+    width: 400px;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    font-size: 18px;
+}
+
+.select-track-links a {
+    background-color: #66806d;
+    padding: 10px 20px;
+    color: #f2f2f2;
+    text-decoration: none;
+}
+
+.select-track-links a:hover {
+    color: #e8ece7;
 }
 
 .nav-menu .lesson-nav-item {
@@ -133,6 +157,7 @@ select {
   font-size: 24px;
 }
 
+#fa-3,
 #fa-2,
 #fa-1,
 #pretest,
@@ -140,6 +165,7 @@ select {
   padding: 25px 0;
 }
 
+#fa-3 h2,
 #fa-1 h2,
 #pretest h2,
 #posttest h2 {
@@ -148,6 +174,7 @@ select {
   margin-block-end: 0;
 }
 
+#fa-3 h2,
 #fa-1 h2 {
   margin: 0 0 15px 0;
 }
@@ -157,6 +184,7 @@ select {
   margin: 0 50px;
 }
 
+#fa-3 .lesson-item-question,
 #fa-2 .lesson-item-question,
 #fa-1 .lesson-item-question,
 #pretest .lesson-item-question,
@@ -168,12 +196,14 @@ select {
   margin: 25px 50px;
 }
 
+#fa-3 .lesson-item-question,
 #fa-2 .lesson-item-question,
 #fa-1 .lesson-item-question {
   margin-left: 50px;
   margin-right: 50px;
 }
 
+#fa-3 .lesson-item-answer-row,
 #fa-1 .lesson-item-answer-row,
 #pretest .lesson-item-answer-row,
 #posttest .lesson-item-answer-row {
@@ -209,6 +239,11 @@ select {
   margin: 25px 100px;
 }
 
+#fa-3 .submit-button {
+    margin-right: 50px;
+}
+
+#fa-3 .question-feedback-text,
 #fa-2 .question-feedback-text,
 #pretest .question-feedback-text,
 #posttest .question-feedback-text {
@@ -219,6 +254,7 @@ select {
   color: black;
 }
 
+#fa-3 .question-feedback-text,
 #posttest .question-feedback-text {
   margin: 0 50px;
 }
@@ -307,10 +343,6 @@ select {
 #fa-2 .lesson-item-answer-item input,
 #fa-2 .lesson-item-answer-item label {
   cursor: pointer;
-}
-
-#landing {
-  text-align: center;
 }
 
 .end {
