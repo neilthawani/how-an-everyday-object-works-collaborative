@@ -43,6 +43,8 @@ body {
 
 .select-track-header {
     font-weight: 400;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 .select-track-links {
@@ -155,6 +157,10 @@ select {
 
 .lesson-item-question {
   font-size: 24px;
+}
+
+.master-key-hypothesis {
+    font-size: 24px;
 }
 
 #fa-3,

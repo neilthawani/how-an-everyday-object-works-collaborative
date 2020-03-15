@@ -1,5 +1,6 @@
 // initial setup
 document.addEventListener('DOMContentLoaded', (event) => {
+    localStorage.setItem("masterKeyHypothesis", "");
     window.localStorage.setItem("lessonItemCount", 0);
     document.getElementsByClassName("back-button")[0].classList.add("hidden");
     document.getElementsByClassName("back-button")[1].classList.add("hidden");
@@ -143,6 +144,13 @@ var continueLesson = function () {
         showAll();
     }
 
+    var masterKeyHypothesisRecall = $(".master-key-hypothesis-recall"),
+        masterKeyHypothesis = localStorage.getItem("masterKeyHypothesis");
+    if (newLessonItemCount === 8 &&
+      !masterKeyHypothesisRecall.text().includes(masterKeyHypothesis)) {
+        masterKeyHypothesisRecall.append(masterKeyHypothesis);
+    }
+
     stopVideo();
 };
 
@@ -271,6 +279,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
         if (this.value === "C") {
             $("#fa-2 .question-feedback-text.incorrect.C")[0].classList.remove("hidden")
         }
+    });
+});
+
+// master key hypothesis code
+document.addEventListener('DOMContentLoaded', (event) => {
+    $(".master-key-hypothesis").keyup(function() {
+        var masterKeyHypothesis = $(".master-key-hypothesis").val();
+        localStorage.setItem("masterKeyHypothesis", masterKeyHypothesis);
     });
 });
 
