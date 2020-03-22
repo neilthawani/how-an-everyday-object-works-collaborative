@@ -156,7 +156,7 @@ select {
 }
 
 .lesson-item-question {
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .master-key-hypothesis {
@@ -202,6 +202,7 @@ select {
   margin: 25px 50px;
 }
 
+#master-key-hypothesis-item .lesson-item-question,
 #fa-3 .lesson-item-question,
 #fa-2 .lesson-item-question,
 #fa-1 .lesson-item-question {
