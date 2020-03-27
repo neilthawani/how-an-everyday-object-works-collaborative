@@ -198,6 +198,8 @@ select {
   font-size: 18px;
 }
 
+.select-track-header + .lesson-item-question,
+.select-track-header + .lesson-item-question + .lesson-item-question,
 #posttest .lesson-item-question {
   margin: 25px 50px;
 }
