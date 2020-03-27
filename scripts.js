@@ -38,13 +38,13 @@ var showNav = function () {
 }
 
 var hideAll = function () {
-    hideNav();
+    // hideNav();
     hideContButtons();
     hideBackButtons();
 }
 
 var showAll = function () {
-    showNav();
+    // showNav();
     showContButtons();
     showBackButtons();
 }
@@ -57,6 +57,9 @@ var navigateTo = function (el) {
 
     // hide menu
     allInstructionalItems[0].classList.add("hidden");
+
+    //for collaborative version, side nav is hidden for all lessons
+    hideNav();
 
     var lessonItemCount = parseInt(window.localStorage.getItem("lessonItemCount"), 10);
     var newLessonItemCount = parseInt(el.getAttribute("data-attr-item-index"), 10);
@@ -72,7 +75,7 @@ var navigateTo = function (el) {
     }
 
     if (newLessonItemCount === 0) {
-        hideNav();
+        // hideNav();
         hideBackButtons();
     } else if (lessonItemCount >= 0 && lessonItemCount < allInstructionalItems.length - 1 &&
         newLessonItemCount !== 2 && newLessonItemCount !== allInstructionalItems.length - 1) {
@@ -109,7 +112,7 @@ var goBack = function () {
     }
 
     if (newLessonItemCount === 0) {
-        hideNav();
+        // hideNav();
         hideBackButtons();
     }
 
@@ -126,7 +129,7 @@ var continueLesson = function () {
     window.localStorage.setItem("lessonItemCount", newLessonItemCount);
 
     if (lessonItemValue >= 0 && lessonItemValue < allInstructionalItems.length - 1) {
-        showNav();
+        // showNav();
         showBackButtons();
     }
 
@@ -147,7 +150,7 @@ var continueLesson = function () {
     var masterKeyHypothesisRecall = $(".master-key-hypothesis-recall"),
         masterKeyHypothesis = localStorage.getItem("masterKeyHypothesis");
     if (newLessonItemCount === 8 &&
-      !masterKeyHypothesisRecall.text().includes(masterKeyHypothesis)) {
+        !masterKeyHypothesisRecall.text().includes(masterKeyHypothesis)) {
         masterKeyHypothesisRecall.append(masterKeyHypothesis);
     }
 
@@ -189,12 +192,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         document.documentElement.scrollTop = 0;
 
         this.classList.add("hidden");
-        document.getElementsByClassName("back-button")[0].classList.remove("hidden");
-        document.getElementsByClassName("continue-button")[0].classList.remove("hidden");
-        document.getElementsByClassName("back-button")[1].classList.remove("hidden");
-        document.getElementsByClassName("continue-button")[1].classList.remove("hidden");
-        document.getElementsByClassName("side-nav")[0].classList.remove("hidden");
-
+        showAll();
         // if question 1 answer is B, select correct feedback
         var selectedAnswer = $("#pretest-question-1 .selected")
         var selectedAnswer1 = selectedAnswer && selectedAnswer[0] && selectedAnswer[0].children[1].getAttribute("data-attr-answer-id");
@@ -212,7 +210,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         for (var i = 0; i < questionTwoDropdowns.length; i++) {
             if (questionTwoDropdowns[i].value !== pretestQuestionTwoAnswers[i]) {
-                questionTwoDropdowns[i].outerHTML = `<p><strong>Correct Answer: </strong>${pretestQuestionTwoAnswersReplace[i]}</p>`;
+
+                questionTwoDropdowns[i].style.backgroundColor = "#FF3358";
             } else {
                 questionTwoDropdowns[i].style.backgroundColor = "#CBDBC5";
             }
@@ -284,7 +283,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 // master key hypothesis code
 document.addEventListener('DOMContentLoaded', (event) => {
-    $(".master-key-hypothesis").keyup(function() {
+    $(".master-key-hypothesis").keyup(function () {
         var masterKeyHypothesis = $(".master-key-hypothesis").val();
         localStorage.setItem("masterKeyHypothesis", masterKeyHypothesis);
     });
@@ -292,7 +291,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 // fa-3 code
 document.addEventListener('DOMContentLoaded', (event) => {
-    $("#fa-3 .submit").click(function() {
+    $("#fa-3 .submit").click(function () {
         $("#fa-3 .submit-button").addClass("hidden");
         $("#fa-3 .question-feedback-text").removeClass("hidden");
     });
@@ -351,7 +350,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         for (var i = 0; i < questionTwoDropdowns.length; i++) {
             if (questionTwoDropdowns[i].value !== posttestQuestionTwoAnswers[i]) {
-                questionTwoDropdowns[i].outerHTML = `<p><strong>Correct Answer: </strong>${posttestQuestionTwoAnswersReplace[i]}</p>`;
+                // questionTwoDropdowns[i].outerHTML = `<p><strong>Correct Answer: </strong>${posttestQuestionTwoAnswersReplace[i]}</p>`;
+                questionTwoDropdowns[i].style.backgroundColor = "#FF3358";
+                correctAns = document.createElement('div');
+                correctAns.innerHTML = `</br><p><strong>Correct Answer: </strong>${posttestQuestionTwoAnswersReplace[i]}</p>`
+                questionTwoDropdowns[i].parentElement.appendChild(correctAns);
             } else {
                 questionTwoDropdowns[i].style.backgroundColor = "#CBDBC5";
             }
