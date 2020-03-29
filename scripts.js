@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         $("#pretest-question-3 .question-feedback-text").removeClass("hidden");
 
-        var pretestQuestionFourAnswers = ["keyway", "springs", "pins", "shaft", "shearline"];
+        var pretestQuestionFourAnswers = ["keyway", "springs", "pin", "shaft", "shearline"];
         var questionFourDropdowns = $("#pretest .pretest-dropdown-question-4");
 
         for (var i = 0; i < questionFourDropdowns.length; i++) {
@@ -360,7 +360,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }
         }
 
-        var posttestQuestionThreeAnswers = ["keyway", "springs", "pins", "shaft", "shearline"];
+        var posttestQuestionThreeAnswers = ["keyway", "springs", "pin", "shaft", "shearline"];
         var questionThreeDropdowns = $("#posttest .posttest-dropdown-question-3");
 
         for (var i = 0; i < questionThreeDropdowns.length; i++) {
